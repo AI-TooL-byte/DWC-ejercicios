@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de actividad</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+    <main class="contenedor">
+        <header>
+            <h1>Reserva de actividad</h1>
+            <p>Calcula el precio final de una reserva segun numero de personas y dias.</p>
+        </header>
+
+        <section class="panel" aria-labelledby="datos-reserva">
+            <h2 id="datos-reserva">Datos de la reserva</h2>
+            <form id="form-reserva" novalidate>
+                <div class="campo">
+                    <label for="personas">Numero de personas</label>
+                    <input id="personas" name="personas" type="number" min="1" step="1" required>
+                </div>
+                <div class="campo">
+                    <label for="dias">Numero de dias</label>
+                    <input id="dias" name="dias" type="number" min="1" step="1" required>
+                </div>
+                <button id="btn-calcular" type="submit">Calcular precio</button>
+            </form>
+        </section>
+
+        <section class="panel" aria-live="polite" aria-labelledby="resultado-reserva">
+            <h2 id="resultado-reserva">Resultado</h2>
+            <dl class="resultado-lista">
+                <div>
+                    <dt>Subtotal</dt>
+                    <dd id="subtotal">0.00 €</dd>
+                </div>
+                <div>
+                    <dt>Descuento</dt>
+                    <dd id="descuento">0.00 €</dd>
+                </div>
+                <div>
+                    <dt>Suplemento</dt>
+                    <dd id="suplemento">0.00 €</dd>
+                </div>
+                <div class="total">
+                    <dt>Precio final</dt>
+                    <dd id="total">0.00 €</dd>
+                </div>
+            </dl>
+            <p id="mensaje" class="mensaje"></p>
+        </section>
+    </main>
+</body>
+</html>
