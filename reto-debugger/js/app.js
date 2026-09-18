@@ -10,7 +10,6 @@ const suplementoSalida = document.getElementById("suplemento");
 const totalSalida = document.getElementById("total");
 const mensajeSalida = document.getElementById("mensaje");
 
-print("hola, mundo")
 
 const formatearEuros = (valor) => `${valor.toFixed(2)} €`;
 
